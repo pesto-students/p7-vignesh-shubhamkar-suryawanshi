@@ -52,9 +52,11 @@ By default the rendering engine can display HTML and XML documents and images. I
 Parsing a document means translating it to a structure the code can use. The result of parsing is usually a tree of nodes that represent the structure of the document.
 The job of the HTML parser is to parse the HTML markup into a parse tree.
 
+![alt parsingOfElements](./images/parsing-model.png)
+
 ## Script processor
 
-The model of the web is synchronous. We expect scripts to be parsed and executed immediately when the parser reaches a <script> tag.
+The model of the web is synchronous. We expect scripts to be parsed and executed immediately when the parser reaches a script tag.
 The parsing of the document halts until the script has been executed. If the script is external then the resource must first be fetched from the network - this is also done synchronously, and parsing halts until the resource is fetched. But, now a days we can add the "defer" attribute to a script, in which case it will not halt document parsing and will execute after the document is parsed. HTML5 adds an option to mark the script as asynchronous so it will be parsed and executed by a different thread.
 
 ## Tree Construction
@@ -66,7 +68,10 @@ While the DOM tree is being constructed, the browser constructs another tree, th
 
 When the renderer is created and added to the tree, it does not have a position and size. Calculating these values is called layout or reflow.
 HTML uses a flow based layout model, meaning that most of the time it is possible to compute the geometry in a single pass. Elements later "in the flow" typically do not affect the geometry of elements that are earlier "in the flow", so layout can proceed left-to-right, top-to-bottom through the document. There are exceptions: for example, HTML tables may require more than one pass.
+
 The coordinate system is relative to the root frame. Top and left coordinates are used.
-Layout is a recursive process. It begins at the root renderer, which corresponds to the <html> element of the HTML document. Layout continues recursively through some or all of the frame hierarchy, computing geometric information for each renderer that requires it.
+
+Layout is a recursive process. It begins at the root renderer, which corresponds to the html element of the HTML document. Layout continues recursively through some or all of the frame hierarchy, computing geometric information for each renderer that requires it.
 The position of the root renderer is 0,0 and its dimensions are the viewport - the visible part of the browser window.
+
 All renderers have a "layout" or "reflow" method, each renderer invokes the layout method of its children that need layout.
