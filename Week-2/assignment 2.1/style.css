@@ -42,6 +42,7 @@ img {
 
 /* Form Style */
 
+<<<<<<< HEAD
 form {
   max-width: 35%;
   margin: auto;
@@ -51,6 +52,17 @@ form {
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 2.5%;
+=======
+form{
+    max-width: 35%;
+    margin: auto;
+    text-align: center;
+    background-color: antiquewhite;
+    border: 1px solid lightgray;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 2.5%;
+>>>>>>> 23e9ea518437e1a7a5e7e4681908db1a6c2d350f
 }
 
 .title,
@@ -62,7 +74,13 @@ form {
   padding-top: 5%;
 }
 
+<<<<<<< HEAD
 label a {
   text-decoration: none;
   color: blueviolet;
+=======
+label a{
+    text-decoration: none;
+    color: blueviolet;
+>>>>>>> 23e9ea518437e1a7a5e7e4681908db1a6c2d350f
 }
