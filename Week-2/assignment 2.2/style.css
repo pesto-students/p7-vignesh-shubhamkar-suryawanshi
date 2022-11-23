@@ -36,8 +36,6 @@ div#main .topleft {
 div#main:hover .topleft {
   transform-origin: top left;
   transform: rotate(90deg);
-  /* 1s, rotate(-90deg) 1s; */
-  /* transition: ease-out; */
 }
 
 div#main .topright {

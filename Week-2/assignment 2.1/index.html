@@ -30,7 +30,7 @@
           cupiditate minus sit. Dignissimos, sint.
           <br /><br />
 
-          <img src="tom&jerry.jpg" alt="Tom & Jerry" />
+          <img src="https://www.1zoom.me/prev/303/302250.jpg" alt="Picture" />
         </div>
 
         <aside class="sidebar">
@@ -73,16 +73,18 @@
     </div>
 
     <form action="#">
-      <p class="title">Title</p>
-      <label for="mr">
-        <input type="radio" name="title" id="mr" value="Mr." />Mr
-      </label>
-      <label for="mrs">
-        <input type="radio" name="title" id="mrs" value="Mrs." />Mrs
-      </label>
-      <label for="miss">
-        <input type="radio" name="title" id="miss" value="Miss" />Miss
-      </label>
+      <fieldset>
+        <legend class="title">Title</legend>
+        <label for="mr">
+          <input type="radio" name="title" id="mr" value="Mr." />Mr
+        </label>
+        <label for="mrs">
+          <input type="radio" name="title" id="mrs" value="Mrs." />Mrs
+        </label>
+        <label for="miss">
+          <input type="radio" name="title" id="miss" value="Miss" />Miss
+        </label>
+      </fieldset>
 
       <br />
       <br />
@@ -114,10 +116,12 @@
 
       <label for="checkbox">
         <input type="checkbox" name="checked" id="checked" /> I agree to the
-        <a href="#" target="_blank">terms and conditions</a> </label
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >terms and conditions</a
+        > </label
       ><br /><br />
 
-      <input type="submit" value="Sign up" />
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
