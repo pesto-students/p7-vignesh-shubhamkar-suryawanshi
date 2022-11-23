@@ -37,11 +37,6 @@ img {
   clear: both;
 }
 
-<<<<<<< HEAD
-=======
-/* Form Style */
-
->>>>>>> 8c2270b88cffec897f2f9ea08349628613c05862
 form {
   max-width: 80%;
   margin: auto;
@@ -51,15 +46,12 @@ form {
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 2.5%;
-<<<<<<< HEAD
 }
 
 @media (min-width: 751px) {
   form {
     max-width: 40%;
   }
-=======
->>>>>>> 8c2270b88cffec897f2f9ea08349628613c05862
 }
 
 .title,
@@ -71,7 +63,6 @@ form {
   padding-top: 5%;
 }
 
-<<<<<<< HEAD
 label a {
   text-decoration: none;
   color: blueviolet;
@@ -79,10 +70,4 @@ label a {
 
 fieldset {
   border: 0;
-=======
-
-label a {
-  text-decoration: none;
-  color: blueviolet;
->>>>>>> 8c2270b88cffec897f2f9ea08349628613c05862
 }
