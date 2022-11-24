@@ -71,3 +71,10 @@ label a {
 fieldset {
   border: 0;
 }
+
+label + input {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2%;
+}
