@@ -11,16 +11,16 @@ const memoize = (fun) => {
   };
 };
 
-const slowFun = (a, b) => {
-  return a + b;
+const slowFun = (...input) => {
+  return input.reduce((a, b) => a + b);
 };
 
 const fastFun = memoize(slowFun);
 
 console.time();
-console.log(fastFun(0253, 3545));
+console.log(fastFun(3545, 1, 5));
 console.timeEnd();
 
 console.time();
-console.log(fastFun(0253, 3545));
+console.log(fastFun(3545, 1, 5));
 console.timeEnd();
