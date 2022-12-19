@@ -1,21 +1,18 @@
-class Person {
-  constructor(firstName, age) {
-    this.firstName = firstName;
-    this.age = age;
-  }
-}
-var person1 = new Person("Surya", 27);
+var Person = function () {};
 
-class Teacher extends Person {
-  teach() {
-    let subject = "Maths";
-    return `${person1.firstName} is now teaching ${subject}`;
-  }
+Person.prototype.initialize = function (name, age) {
+  this.name = name;
+  this.age = age;
+};
 
-  get output1() {
-    return this.teach();
-  }
-}
+var Teacher = function () {};
+Teacher.prototype = new Person();
 
-var teacher1 = new Teacher();
-console.log(teacher1.output1);
+Teacher.prototype.teach = function (subject) {
+  console.log(`${this.name} is now teaching ${subject}`);
+};
+
+var him = new Teacher();
+
+him.initialize("Surya", 25);
+him.teach("Maths");
