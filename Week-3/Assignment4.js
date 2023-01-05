@@ -32,7 +32,7 @@ function createStack() {
   };
 }
 
-const stackAns = createStack();
+const stackAns = Object.freeze(createStack());
 stackAns.push(5);
 stackAns.push(3);
 stackAns.pop();

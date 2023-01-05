@@ -4,6 +4,7 @@ const Fibonacci = (num) => ({
       old = 0,
       new1 = 0;
 
+
     return {
       next: () => {
         if (i++ <= num) {
