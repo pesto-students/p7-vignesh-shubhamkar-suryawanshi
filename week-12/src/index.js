@@ -1,36 +1,51 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { todos } from './constants';
 
 const App = () => {
-  const [taskList, setTaskList] = useState(todos);
-  // new task list is for map
-  const [newTaskList, setNewTaskList] = useState(todos);
+  const [value, setValue] = useState('');
+  const [list, setList] = useState(['Watch movie', 'Walk around']);
 
-  function addNewTask() {
-    const task = prompt('Enter your new task');
-    setTaskList(taskList.push(task));
-    setNewTaskList(taskList);
-  }
-
-  function deleteTask() {
-    console.log('clicked');
+  function deleteTask(todo) {
+    setList((todos) => {
+      return todos.filter((item) => item !== todo);
+    });
   }
 
   return (
     <div className="App">
-      <h1>My ToDo list</h1>
-      {newTaskList.map((todo) => (
-        <div key={todo} className="mappe">
+      <h1>ToDo list</h1>
+
+      <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Add your new task"
+      />
+      <button
+        onClick={() => {
+          const newList = [...list, value];
+          setList(newList);
+        }}
+      >
+        Add Task
+      </button>
+
+      {list.map((todo, index) => (
+        <div key={index} className="mappe">
           <p>{todo}</p>
-          <button onClick={deleteTask}>Delete</button>
+          <button
+            onClick={() => {
+              deleteTask(todo);
+            }}
+          >
+            Delete
+          </button>
         </div>
       ))}
-      <button onClick={addNewTask}>+ New Task</button>
     </div>
   );
 };
+// Not able to add the task...seraching for solution from Namaste React...
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

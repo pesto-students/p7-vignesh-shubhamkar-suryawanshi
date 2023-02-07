@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -14,9 +15,4 @@ code {
 
 .App {
   text-align: center;
-}
-
-.mappe {
-  display: flex;
-  justify-content: center;
 }
